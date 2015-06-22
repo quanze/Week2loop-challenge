@@ -1,0 +1,25 @@
+var isDivisible3 =false;
+var isDivisible5 = false;
+
+for (var i = 1 ; i<101;i++){
+	if ((i%3)==0){
+		isDivisible3 = true;
+	}
+	if ((i%5)==0){
+		isDivisible5 = true;
+	}
+
+	if (isDivisible5 && isDivisible3){
+		console.log("FizzBuzz");
+		isDivisible3 =false;
+		isDivisible5 = false;
+	} else if (isDivisible3 ==true){
+		console.log("Fizz");
+		isDivisible3 =false;
+	} else if (isDivisible5==true){
+		console.log("Buzz");	
+		isDivisible5 =false;
+	} else {
+		console.log(i);
+	}
+};
